@@ -1,11 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore} from "redux";
-import {incrementReducer} from "./reducers/incrementReducer";
+import {counterReducer} from "./reducers/counterReducer";
 import {Provider} from "react-redux";
 import {CounterContainer} from "./components/Counter";
 
-const store = createStore(incrementReducer);
+const store = createStore(counterReducer);
 
 render(
     <Provider store={store}>
