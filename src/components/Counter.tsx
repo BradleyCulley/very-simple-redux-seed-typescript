@@ -18,15 +18,19 @@ interface StoreState {
     count: number
 }
 
-const mapStateToProps = (state: StoreState) => ({
-    count: state.count
-});
+function mapStateToProps(state: StoreState) {
+    return {
+        count: state.count
+    };
+}
 
-const mapDispatchToProps = (dispatch: Dispatch<Action<string>>) => ({
-    onClick: () => dispatch({
-        type: 'INCREMENT'
-    })
-});
+function mapDispatchToProps(dispatch: Dispatch<Action<string>>) {
+    return {
+        onClick: () => dispatch({
+            type: 'INCREMENT'
+        })
+    };
+}
 
 export const CounterContainer = connect(
   mapStateToProps,
